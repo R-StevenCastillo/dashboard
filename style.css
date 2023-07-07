@@ -237,8 +237,9 @@ button {
     padding: 10px;
 }
 
-.trend-user {
-    padding-right: 10px;
+.user-name,
+.user-task {
+    padding-left: 10px;
 }
 
 .user-name {
