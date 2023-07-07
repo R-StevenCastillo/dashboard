@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    background-color: #dbeafe;
+}
+
 .sidenav {
     height: 100%;
     width: 300px;
@@ -10,14 +14,14 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #1e40af;
     overflow-x: hidden;
     padding-top: 100px;
 }
 
 .sidenav p {
     font-size: 30px;
-    color: white;
+    color: #bfdbfe;
     position: absolute;
     top: 0;
     padding: 12.5px 6px 20px 75px;
@@ -25,7 +29,7 @@
 
 .sidenav .logo {
     font-size: 30px;
-    color: white;
+    color: #bfdbfe;
     position: absolute;
     top: 0;
     padding: 10px 6px 20px 30px;
@@ -36,29 +40,28 @@
     padding: 6px 6px 20px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #f1f1f1;
+    color: #bfdbfe;
     display: flex;
     align-items: center;
 }
   
 .sidenav a:hover {
-    color: #818181;
+    color: #60a5fa;
 }
 
 svg {
     padding-right: 20px;
     width: 25px;
-    fill: white;
+    fill: #dbeafe;
 }
 
 #header {
-    width: 1fr;
     height: 11em;
     background-color: white;
     margin-left: 300px;
-    box-shadow: 0 1.5px 0 0 rgb(128, 128, 128, 0.7),
-                0 2.5px 0 0 rgb(128, 128, 128, 0.5),
-                0 4px 0 0 rgb(128, 128, 128, 0.5);
+    box-shadow: 0 1.5px 0 0 #808080b3,
+                0 2.5px 0 0 #80808080,
+                0 4px 0 0 #80808080;
 }
 
 .user-avatar {
@@ -100,8 +103,7 @@ svg {
     font-size: 16px;
     padding: 10px;
     border-radius: 10px;
-    background-color: #e4e3e3;
-    border-color: white;
+    background-color: #dbeafe;
     border: none;
 }
 
@@ -109,13 +111,18 @@ svg {
     font-size: 18px;
 }
 
-.username {
+.username,
+.news-title,
+.projects-title {
     font-size: 24px;
 }
 
 .user,
 .username,
-.welcome-text {
+.welcome-text,
+.news-title,
+.projects-title,
+.message-titles  {
     font-weight: bold;
 }
 
@@ -124,6 +131,116 @@ button {
     height: 2.4em;
     border-radius: 25px;
     border: none;
-    background-color: rgb(0, 209, 236);
+    background-color: #1e40af;
+    color: #dbeafe;
     margin-left: 20px;
+}
+
+#elements-container {
+    height: 100%;
+    margin-left: 300px;
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#projects-container {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 200px 200px 200px;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#announcements-container {
+    grid-column: 2;
+    padding-top: 25px;
+    padding-right: 20px;
+}
+
+#trending-container {
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 20px;
+    width: 95%;
+}
+
+.projects-title {
+    grid-column: 1 / span 2;
+    padding-top: 25px;
+}
+
+.cards,
+.news-container,
+.user-container {
+    border: none;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.cards {
+    padding: 10px;
+    border-left: solid 8px rgb(255, 208, 0);
+    
+}
+
+.card-title {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.card-description {
+    padding-top: 5px;
+    padding-left: 10px;
+    height: 100px;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: end;
+}
+
+.news-title {
+    padding-bottom: 10px;
+}
+
+.news-container {
+    height: 17.5em;
+}
+
+.message-container {
+    border-bottom: 1px solid gray;
+    margin: 15px;
+}
+
+.message-titles {
+    padding-bottom: 4px;
+    font-size: 15px;
+}
+
+.message {
+    padding-bottom: 8px;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+.trending-user {
+    display: flex;
+    width: 100%;
+}
+
+.trending-user {
+    padding: 10px;
+}
+
+.trend-user {
+    padding-right: 10px;
+}
+
+.user-name {
+    padding-bottom: 5px;
 }
